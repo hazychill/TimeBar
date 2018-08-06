@@ -1,0 +1,27 @@
+﻿<Window x:Class="TimeBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeBar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="30" Width="150" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" MouseDown="Window_MouseDown" Left="30" Top="30">
+    <Window.Background>
+        <SolidColorBrush Opacity="0" Color="White"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Border x:Name="frameBorde" BorderThickness="1">
+            <DockPanel Grid.Row="0" Grid.Column="0" FlowDirection="LeftToRight" LastChildFill="True">
+                <Canvas x:Name="elapsedCanvas" DockPanel.Dock="Left" />
+                <Canvas x:Name="remainingCanvas" />
+            </DockPanel>
+        </Border>
+        <Label x:Name="timeLabel" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Consolas" FontWeight="Bold" FontSize="15"></Label>
+    </Grid>
+</Window>
